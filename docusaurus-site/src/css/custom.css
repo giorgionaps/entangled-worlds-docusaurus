@@ -1,7 +1,5 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Global CSS for Docusaurus site
  */
 
 /* ---------- Theme variables ---------- */
@@ -17,11 +15,11 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
-  /* Taller header to fit your larger SVG */
+  /* Taller header to fit the larger SVG */
   --ifm-navbar-height: 72px;
 }
 
-/* For readability in dark mode */
+/* Dark-mode palette */
 [data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
@@ -34,32 +32,26 @@
 }
 
 /* ---------- Navbar / Logo ---------- */
-
-/* Center the brand area vertically */
 .navbar__brand,
 .navbar__logo {
   display: flex;
   align-items: center;
 }
 
-/* Size + slight upward nudge for the SVG logo */
 .navbar__logo img,
 .navbar__logo svg {
-  height: 56px;   /* slightly less than navbar height */
+  height: 56px;        /* slightly less than navbar height */
   width: auto;
-  display: block; /* remove inline-image baseline gap */
+  display: block;      /* remove baseline gap */
   transform: translateY(-1px);
 }
 
-/* Tiny extra breathing room */
-.navbar {
-  padding-top: 2px;
-  padding-bottom: 2px;
-}
+.navbar { padding-top: 2px; padding-bottom: 2px; }
 
 /* ---------- Homepage hero ---------- */
 .home-hero {
-  padding: 3rem 0 4rem;
+  /* tightened bottom space a bit */
+  padding: 3rem 0 3.5rem;
   background:
     radial-gradient(circle at 20% -10%, rgba(130, 200, 255, 0.12), transparent 60%),
     radial-gradient(circle at 100% 0, rgba(255, 170, 120, 0.08), transparent 45%),
@@ -69,7 +61,7 @@
 .hero-inner {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 2rem;
+  gap: 1.75rem;        /* a touch tighter */
   align-items: center;
 }
 
@@ -83,12 +75,8 @@
   opacity: 0.9;
 }
 
-.cta .button {
-  margin-right: 1rem;
-  margin-top: 1rem;
-}
+.cta .button { margin-right: 1rem; margin-top: 0.75rem; }
 
-/* Make the hero image look polished */
 .hero-art img {
   width: 100%;
   height: auto;
@@ -96,10 +84,17 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-/* ---------- New home cards (use with row/col markup) ---------- */
+/* ---------- Home cards (row/col markup) ---------- */
 .home-cards {
-  margin-top: 3rem;     /* space below hero */
-  margin-bottom: 3rem;  /* bottom breathing room */
+  margin-top: 2.5rem;   /* slightly closer to hero */
+  margin-bottom: 3rem;
+}
+
+/* Center the two cards as a block and control width */
+.home-cards .row {
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 1.25rem;
 }
 
 .home-cards .card {
@@ -108,7 +103,6 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
-
 .home-cards .card:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
@@ -128,40 +122,43 @@
   border-radius: 12px;
   display: grid;
   place-items: center;
-  /* subtle accent bubble using your primary color */
   background: color-mix(in srgb, var(--ifm-color-primary) 20%, transparent);
 }
 
-.home-cards .card__footer {
-  margin-top: auto;                 /* push footer link to bottom */
-  padding: 0 1.5rem 1.5rem;
-}
-
+.home-cards .card__footer { margin-top: auto; padding: 0 1.5rem 1.5rem; }
 .home-cards .button--link { padding-left: 0; }
 
-/* === Footer layout with bigger logo area === */
-/* === Rebalanced footer grid === */
+/* ---------- Footer (rebalanced with larger brand) ---------- */
+
+/* Cohesive width + subtle background */
+.footer .container { max-width: 1160px; }
+.footer {
+  background: #2b3138;
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding-top: 2rem;     /* compact */
+  padding-bottom: 1.25rem;
+}
+
+/* Grid: brand | docs | community (second column closer to center) */
 .footer__links {
   display: grid;
-  grid-template-columns: 1.2fr 0.9fr 0.9fr; /* brand | docs | community */
+  grid-template-columns: 1.2fr 0.9fr 0.9fr;
   column-gap: 2rem;
   align-items: start;
 }
 
-/* Brand block still stacked */
+/* Brand stacked: bigger logo above description */
 .footer-brand {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.75rem;
 }
-
 .footer-brand__logo {
-  height: 64px;   /* keep logo big, but not overwhelming */
+  height: 64px;         /* prominent but not overwhelming */
   width: auto;
   opacity: 0.95;
 }
-
 .footer-desc {
   margin: 0;
   font-size: 0.95rem;
@@ -170,14 +167,22 @@
   color: rgba(255,255,255,.85);
 }
 
-/* Docs + Community columns tighter */
-.footer__title {
-  font-size: 0.95rem;
-  margin-bottom: 0.4rem;
+/* Headings & lists */
+.footer__title { font-size: 0.95rem; margin-bottom: 0.4rem; }
+.footer__items > li { margin: 0.25rem 0; font-size: 0.9rem; }
+
+/* Links */
+.footer__link-item { opacity: .92; text-underline-offset: 3px; }
+.footer__link-item:hover,
+.footer__link-item:focus-visible {
+  opacity: 1;
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
 }
-.footer__items > li {
-  margin: 0.25rem 0;
-  font-size: 0.9rem;
+.footer__link-item .iconExternalLink {
+  margin-left: .35ch;
+  transform: translateY(1px);
+  opacity: .85;
 }
 
 /* Copyright */
@@ -188,13 +193,27 @@
   color: rgba(255,255,255,.72);
 }
 
-/* Mobile: stack everything neatly */
+/* ---------- Responsive ---------- */
 @media (max-width: 996px) {
-  .footer__links {
-    grid-template-columns: 1fr;
-    row-gap: 1rem;
-  }
-  .footer-brand__logo {
-    height: 56px;
-  }
+  .home-cards .col { margin-bottom: 0.75rem; }
+  .home-cards .row { max-width: 92%; }
+
+  .footer .container { max-width: 92%; }
+  .footer__links { grid-template-columns: 1fr; row-gap: 1rem; }
+  .footer-brand__logo { height: 56px; }
+  .footer-desc { font-size: .95rem; }
+}
+
+/* ---------- Legacy: old feature grid (safe to remove later) ---------- */
+.feature-grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+.feature {
+  padding: 1.25rem;
+  border-radius: 16px;
+  background: var(--ifm-card-background-color);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
