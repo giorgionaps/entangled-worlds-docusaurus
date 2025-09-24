@@ -1,5 +1,5 @@
 ---
-id: how-to-publish
+id: release-notes
 title: How to Publish Docs
 ---
 

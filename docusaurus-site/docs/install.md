@@ -1,5 +1,5 @@
 ---
-id: how-to-publish
+id: install
 title: How to Publish Docs
 ---
 
