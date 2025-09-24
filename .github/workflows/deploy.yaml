@@ -2,7 +2,7 @@ name: Deploy Docusaurus to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main ]  # change if your branch is different
 
 permissions:
   contents: read
@@ -14,17 +14,27 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: docusaurus-site
+        working-directory: docusaurus-site   # run npm commands inside this folder
     steps:
+      # Checkout repo
       - uses: actions/checkout@v4
+
+      # Set up Node.js
       - uses: actions/setup-node@v4
         with:
           node-version: '18'
-      - run: npm ci
+
+      # Install dependencies
+      - run: npm install
+
+      # Build the Docusaurus site
       - run: npm run build
+
+      # Upload the built site for GitHub Pages
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build
+          path: ./build   # build folder relative to working-directory
+
   deploy:
     needs: build-and-deploy
     runs-on: ubuntu-latest
