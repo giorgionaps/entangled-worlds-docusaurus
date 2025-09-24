@@ -46,7 +46,7 @@ export default function Home() {
           </div>
         </div>
         <div className="card__footer">
-          <Link className="button button--link" to="/docs/install">Installation guide →</Link>
+          <Link className="button button--link" to={useBaseUrl('/docs/install')}>Installation guide →</Link>
         </div>
       </div>
     </div>
@@ -63,7 +63,7 @@ export default function Home() {
           </div>
         </div>
         <div className="card__footer">
-          <Link className="button button--link" to="/docs/release-notes">View release notes →</Link>
+          <Link className="button button--link" to={useBaseUrl('/docs/release-notes')}>View release notes →</Link>
         </div>
       </div>
     </div>
