@@ -14,17 +14,17 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: docusaurus-site  # <- this ensures npm sees package-lock.json
+        working-directory: docusaurus-site
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '18'
-      - run: npm ci                       # runs in docusaurus-site
-      - run: npm run build                 # build the site
+      - run: npm ci
+      - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build                    # build folder relative to docusaurus-site
+          path: ./build
   deploy:
     needs: build-and-deploy
     runs-on: ubuntu-latest
