@@ -1,7 +1,7 @@
 // @ts-check
 import path from 'node:path';
-import {fileURLToPath} from 'node:url';
-import {themes as prismThemes} from 'prism-react-renderer';
+import { fileURLToPath } from 'node:url';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -27,15 +27,31 @@ const config = {
     locales: ['en'],
   },
 
+  // ✅ Put metadata at the top level (not inside themeConfig)
+  metadata: [
+    { name: 'title', content: 'Entangled Worlds — Technical Writing Portfolio' },
+    { name: 'description', content: 'Docs & portfolio for Entangled Worlds, a Noita mod. Guides for players and contributors.' },
+
+    { property: 'og:title', content: 'Entangled Worlds — Technical Writing Portfolio' },
+    { property: 'og:description', content: 'Docs & portfolio for Entangled Worlds, a Noita mod. Guides for players and contributors.' },
+    // Absolute URL for scrapers:
+    { property: 'og:image', content: 'https://giorgionaps.github.io/entangled-worlds-docusaurus/img/social-card.png' },
+    { property: 'og:url', content: 'https://giorgionaps.github.io/entangled-worlds-docusaurus/' },
+    { property: 'og:type', content: 'website' },
+
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Entangled Worlds — Technical Writing Portfolio' },
+    { name: 'twitter:description', content: 'Docs & portfolio for Entangled Worlds, a Noita mod. Guides for players and contributors.' },
+    { name: 'twitter:image', content: 'https://giorgionaps.github.io/entangled-worlds-docusaurus/img/social-card.png' },
+  ],
+
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          // ✅ Robust on Windows + ESM:
           sidebarPath: path.resolve(__dirname, 'sidebars.js'),
-          // routeBasePath: 'docs',
           editUrl: undefined,
         },
         blog: {
@@ -55,7 +71,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // This also becomes the default social image (Docusaurus builds an absolute URL using url/baseUrl)
       image: 'img/docusaurus-social-card.jpg',
+
       navbar: {
         style: 'dark',
         title: 'Home',
@@ -66,6 +84,7 @@ const config = {
           { href: 'https://store.steampowered.com/app/881100/Noita/', label: 'Noita on Steam', position: 'right' },
         ],
       },
+
       footer: {
         style: 'dark',
         links: [
@@ -97,25 +116,7 @@ const config = {
         ],
         copyright: `© ${new Date().getFullYear()} Veronika Zvarych`,
       },
-      module.exports = {
-  // ...other config
-  themeConfig: {
-    metadata: [
-      { name: 'title', content: 'Entangled Worlds — Technical Writing Portfolio' },
-      { name: 'description', content: 'Docs & portfolio for Entangled Worlds, a Noita mod. Guides for players and contributors.' },
-      { property: 'og:title', content: 'Entangled Worlds — Technical Writing Portfolio' },
-      { property: 'og:description', content: 'Docs & portfolio for Entangled Worlds, a Noita mod. Guides for players and contributors.' },
-      { property: 'og:image', content: 'https://giorgionaps.github.io/entangled-worlds-docusaurus/img/social-card.png' },
-      { property: 'og:url', content: 'https://giorgionaps.github.io/entangled-worlds-docusaurus/' },
-      { property: 'og:type', content: 'website' },
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: 'Entangled Worlds — Technical Writing Portfolio' },
-      { name: 'twitter:description', content: 'Docs & portfolio for Entangled Worlds, a Noita mod. Guides for players and contributors.' },
-      { name: 'twitter:image', content: 'https://giorgionaps.github.io/entangled-worlds-docusaurus/img/social-card.png' },
 
-    ],
-  },
-},
       colorMode: { defaultMode: 'dark', respectPrefersColorScheme: true },
     }),
 };
