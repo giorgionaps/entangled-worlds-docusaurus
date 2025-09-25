@@ -192,6 +192,29 @@
   font-size: 0.85rem;
   color: rgba(255,255,255,.72);
 }
+/* General Markdown images */
+.markdown img {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Optional: images with captions */
+.figure {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.figure img {
+  margin-bottom: 0.5rem;
+}
+
+.figure figcaption {
+  font-size: 0.9rem;
+  color: var(--ifm-color-secondary-dark);
+}
 
 /* ---------- Responsive ---------- */
 @media (max-width: 996px) {

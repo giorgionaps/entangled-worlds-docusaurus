@@ -48,8 +48,7 @@ baseUrl: '/entangled-worlds-docusaurus/',
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl:undefined,
         },
         blog: {
           showReadingTime: true,
@@ -100,7 +99,7 @@ footer: {
         {
       html: `
         <div class="footer-brand footer-brand--stacked">
-          <img src="img/logo.svg" alt="Entangled Worlds" class="footer-brand__logo" />
+<img src="/entangled-worlds-docusaurus/img/logo.svg" alt="Entangled Worlds" class="footer-brand__logo" />
           <p class="footer-desc">
             Docs & portfolio for <strong>Entangled Worlds</strong>, a Noita mod.<br/>
             Guides for players and contributors.
