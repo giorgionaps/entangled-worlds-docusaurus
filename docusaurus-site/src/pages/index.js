@@ -21,7 +21,7 @@ export default function Home() {
               <strong> Entangled Worlds</strong>, a Noita mod. 
             </p>
             <div className="cta">
-              <Link className="button button--primary button--lg" to="/docs/intro">Read the Mod Docs</Link>
+              <Link className="button button--primary button--lg" to={useBaseUrl('/docs/intro')}>Read the Mod Docs</Link>
 <Link
   className="button button--secondary button--lg"
   href="https://github.com/giorgionaps/entangled-worlds-docusaurus"
