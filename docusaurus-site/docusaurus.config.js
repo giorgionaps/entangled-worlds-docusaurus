@@ -55,9 +55,8 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // This also becomes the default social image (Docusaurus builds an absolute URL using url/baseUrl)
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/social-card.png',
 
-  // ✅ Put metadata at the top level (not inside themeConfig)
   metadata: [
     { name: 'title', content: 'Entangled Worlds — Technical Writing Portfolio' },
     { name: 'description', content: 'Docs & portfolio for Entangled Worlds, a Noita mod. Guides for players and contributors.' },
