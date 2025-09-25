@@ -63,7 +63,7 @@ const config = {
         items: [
           { type: 'docSidebar', sidebarId: 'tutorialSidebar', label: 'Docs', position: 'left' },
           { href: 'https://github.com/IntQuant/noita_entangled_worlds', label: 'Mod GitHub', position: 'right' },
-          { href: 'https://github.com/<your-username>', label: 'My GitHub', position: 'right' },
+          { href: 'https://store.steampowered.com/app/881100/Noita/', label: 'Noita on Steam', position: 'right' },
         ],
       },
       footer: {
