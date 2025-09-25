@@ -1,7 +1,6 @@
 ---
 id: install
 title: How to Install the Mod
-slug: /install
 ---
 
 # Noita Entangled Worlds  

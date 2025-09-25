@@ -1,7 +1,6 @@
 ---
 id: release-notes
 title: Release Notes v1.6.2
-slug: /release-notes
 ---
 
 # Noita Entangled Worlds v1.6.2
