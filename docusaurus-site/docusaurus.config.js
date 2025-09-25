@@ -27,23 +27,6 @@ const config = {
     locales: ['en'],
   },
 
-  // ✅ Put metadata at the top level (not inside themeConfig)
-  metadata: [
-    { name: 'title', content: 'Entangled Worlds — Technical Writing Portfolio' },
-    { name: 'description', content: 'Docs & portfolio for Entangled Worlds, a Noita mod. Guides for players and contributors.' },
-
-    { property: 'og:title', content: 'Entangled Worlds — Technical Writing Portfolio' },
-    { property: 'og:description', content: 'Docs & portfolio for Entangled Worlds, a Noita mod. Guides for players and contributors.' },
-    // Absolute URL for scrapers:
-    { property: 'og:image', content: 'https://giorgionaps.github.io/entangled-worlds-docusaurus/img/social-card.png' },
-    { property: 'og:url', content: 'https://giorgionaps.github.io/entangled-worlds-docusaurus/' },
-    { property: 'og:type', content: 'website' },
-
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'Entangled Worlds — Technical Writing Portfolio' },
-    { name: 'twitter:description', content: 'Docs & portfolio for Entangled Worlds, a Noita mod. Guides for players and contributors.' },
-    { name: 'twitter:image', content: 'https://giorgionaps.github.io/entangled-worlds-docusaurus/img/social-card.png' },
-  ],
 
   presets: [
     [
@@ -74,6 +57,23 @@ const config = {
       // This also becomes the default social image (Docusaurus builds an absolute URL using url/baseUrl)
       image: 'img/docusaurus-social-card.jpg',
 
+  // ✅ Put metadata at the top level (not inside themeConfig)
+  metadata: [
+    { name: 'title', content: 'Entangled Worlds — Technical Writing Portfolio' },
+    { name: 'description', content: 'Docs & portfolio for Entangled Worlds, a Noita mod. Guides for players and contributors.' },
+
+    { property: 'og:title', content: 'Entangled Worlds — Technical Writing Portfolio' },
+    { property: 'og:description', content: 'Docs & portfolio for Entangled Worlds, a Noita mod. Guides for players and contributors.' },
+    // Absolute URL for scrapers:
+    { property: 'og:image', content: 'https://giorgionaps.github.io/entangled-worlds-docusaurus/img/social-card.png' },
+    { property: 'og:url', content: 'https://giorgionaps.github.io/entangled-worlds-docusaurus/' },
+    { property: 'og:type', content: 'website' },
+
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Entangled Worlds — Technical Writing Portfolio' },
+    { name: 'twitter:description', content: 'Docs & portfolio for Entangled Worlds, a Noita mod. Guides for players and contributors.' },
+    { name: 'twitter:image', content: 'https://giorgionaps.github.io/entangled-worlds-docusaurus/img/social-card.png' },
+  ],
       navbar: {
         style: 'dark',
         title: 'Home',
