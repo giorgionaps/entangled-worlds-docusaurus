@@ -16,7 +16,7 @@ export default function Home() {
           <div className="hero-copy">
             <h1>Entangled Worlds (Noita) — and my portfolio</h1>
             <p>
-              Welcome! This site hosts my technical writing portfolio and the official docs for
+              Welcome! This site hosts my technical writing portfolio and my non-official docs for
               <strong> Entangled Worlds</strong>, a Noita mod. 
             </p>
             <div className="cta">
