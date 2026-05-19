@@ -16,8 +16,8 @@ export default function Home() {
           <div className="hero-copy">
             <h1>Entangled Worlds (Noita) — and my portfolio</h1>
             <p>
-              Welcome! This site hosts my technical writing portfolio and my non-official docs for
-              <strong> Entangled Worlds</strong>, a Noita mod. 
+              Welcome! This site showcases my technical writing samples, including public docs-as-code projects, commercial documentation samples, and non-official
+              documentation for <strong>Entangled Worlds</strong>, a Noita mod.
             </p>
             <div className="cta">
               <Link className="button button--primary button--lg" to={useBaseUrl('/docs/intro')}>
@@ -85,7 +85,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3>My Other Work Samples</h3>
-                    <p>Curated commercial docs not related to Noita and Entangled Worlds. API, user guides, compliance.</p>
+                    <p>Curated commercial docs not related to Entangled Worlds. API, user guides, compliance.</p>
                   </div>
                 </div>
                 <div className="card__footer">
