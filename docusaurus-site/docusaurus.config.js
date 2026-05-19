@@ -95,8 +95,7 @@ const config = {
         <div class="footer-brand footer-brand--stacked">
           <img src="img/logo.svg" alt="Entangled Worlds" class="footer-brand__logo" />
           <p class="footer-desc">
-            Docs & portfolio for <strong>Entangled Worlds</strong>, a Noita mod.<br/>
-            Guides for players and contributors.
+            Technical writing portfolio featuring professional documentation samples and non-official guides for Entangled Worlds, a Noita mod.
           </p>
         </div>
       `,
